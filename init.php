@@ -21,14 +21,9 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt */
 
 
- // Function menu
-
 define('ROOTDIR', plugin_dir_path(__FILE__));
 require_once(ROOTDIR . 'views/index.php');
 require_once(ROOTDIR . 'views/create.php');
-
-
-
 
 add_action('admin_menu','news_flash_menu');
 function news_flash_menu() {
@@ -73,10 +68,8 @@ function news_flash_menu() {
 	
 }
 
-
-    
-
 // Load scripts
+add_action('admin_enqueue_scripts', 'news_css_js');
 function news_css_js(){
     wp_enqueue_style('news-css', plugin_dir_url(__FILE__) . 'resource\css\style.css');
     wp_enqueue_script('news-js', plugin_dir_url(__FILE__) . 'resource\js\main.js');
@@ -86,6 +79,6 @@ function news_css_js(){
     wp_enqueue_script('axios-js', 'https://unpkg.com/axios/dist/axios.min.js');
 }
 
-add_action('admin_enqueue_scripts', 'news_css_js');
+
 
 
