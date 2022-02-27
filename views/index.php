@@ -1,9 +1,9 @@
 <?php 
-function news_index(){
+function index(){
 
 ?>
 
-<h1>News</h1>
+<h1>Index</h1>
 
 <?php }
 ?>
