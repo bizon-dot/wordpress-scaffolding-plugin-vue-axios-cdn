@@ -1,9 +1,9 @@
 <?php 
-function news_create(){
+function create(){
 
 ?>
 
-<h1>News</h1>
+<h1>Create</h1>
 
 <?php }
 ?>
